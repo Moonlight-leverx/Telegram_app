@@ -150,3 +150,7 @@ $(".overlay").click(function () {
         right: '-200vw'
     }, 180);
 });
+
+function meAlert() {
+	alert("Hello, Doge");
+}
