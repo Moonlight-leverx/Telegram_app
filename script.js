@@ -152,5 +152,5 @@ $(".overlay").click(function () {
 });
 
 function meAlert() {
-	alert("Hello, Doge");
+	alert("Hello, Dogeee");
 }
