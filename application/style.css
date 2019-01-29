@@ -1,0 +1,437 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	overflow: hidden;
+	background: #456274;
+	font-family: 'Karla', sans-serif;
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+}
+
+button, input[type="text"] {
+	border: none;
+	outline: none;
+}
+
+.menuWrap {
+	position: absolute;
+	width: 30%;
+	min-width: 240px;
+	max-width: 320px;
+	height: 100%;
+	z-index: 3;
+	display: none;
+}
+
+.menu {
+	position: relative;
+	left: -320px;
+	width: 100%;
+	height: 100vh;
+	float: left;
+	background: #17212b;
+	box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);
+	opacity: 0;
+}
+
+.me {
+	position: relative;
+	width: calc(100% - 50px);
+	height: 140px;
+	background: #419fd9;
+	padding: 15px 25px;
+	margin-bottom: 15px;
+}
+
+.me .image {
+	width: 70px;
+	height: 70px;
+	background: #FFF url(Resources/doge.png) no-repeat center;
+	background-size: cover;
+	border-radius: 100%;
+	cursor: pointer;
+}
+
+.me .myinfo {
+	position: absolute;
+	bottom: 15px;
+	font-size: 14px;
+	color: #f5f5f5;
+}
+
+.myinfo .name {
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.myinfo .phone {
+	font-weight: 300;
+}
+
+nav button {
+	width: 100%;
+	height: 45px;
+	background: #17212b;
+	text-align: left;
+	padding-left: 20px;
+	color: #f5f5f5;
+}
+
+nav {
+	float: left;
+	width: 100%;
+	height: auto;
+	max-height: 350px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+nav button:hover {
+	background: #253544;
+}
+
+nav button>span {
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 20px;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.config {
+	position: absolute;
+	width: 50%;
+	height: 100vh;
+	left: 0px;
+	right: -200vw;
+	top: 0px;
+	margin: auto;
+	background: #DDD;
+	overflow-x: hidden;
+	overflow-y: auto;
+	display: block;
+	z-index: 520;
+	opacity: 0;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 2;
+	display: none;
+}
+
+
+.leftPanel {
+	position: relative;
+	/* display: inline-block; */
+	left: 0px;
+	width: 320px;
+	height: 100vh;
+	float: left;
+	background: #17212b;
+	border-right: 1px solid #1e3850;
+}
+
+header {
+	width: 100%;
+	height: 70px;
+	background: #17212b;
+}
+
+.hamburger {
+	float: left;
+	width: 32px;
+	height: 32px;
+	margin: 20px 15px;
+	margin-bottom: 0px;
+	color: #BBB;
+	cursor: pointer;
+	opacity: 0.6;
+	background: none;
+}
+
+.hamburger:hover {
+	opacity: 1;
+}
+
+.hamburger>svg {
+	width: 24px;
+	height: 24px;
+	fill: #888;
+}
+
+.chats {
+	width: 100%;
+	height: calc(100vh - 70px);
+	float: left;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.chat-btn {
+	float: left;
+	width: 100%;
+	height: 80px;
+	background: #17212b;
+	color: #f5f5f5;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.chat-btn:hover {
+	background: rgb(85, 108, 150);
+}
+
+.info {
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+
+.info p {
+	float: left;
+}
+
+.info .image {
+	width: 55px;
+	height: 55px;
+	background: #DDD url(Resources/doge.png) no-repeat center;
+	background-size: cover;
+	border-radius: 100%;
+	margin: 13px 13px;
+}
+
+.info .name {
+	float: left;
+	font-weight: 600;
+	margin-left: 80px;
+	margin-top: 18px;
+}
+
+.info .message {
+	float: left;
+	clear: left;
+	margin-left: 80px;
+	margin-top: 7px;
+}
+
+.rightPanel {
+	float: left;
+	width: calc(100% - 321px);
+	height: 100vh;
+	background: #999;
+}
+
+.rightPanel .top {
+	position: relative;
+	width: 100%;
+	height: 70px;
+	background: #17212b;
+}
+
+.leftSide {
+	/* display: inline-block; */
+	clear: none;
+	float: left;
+}
+
+.leftSide .chat-name {
+	float: left;
+	margin-left: 30px;
+	margin-top: 13px;
+	color: #f5f5f5;
+	font-weight: 600;
+	cursor: default;
+}
+
+.chat-name>span {
+	font-size: 12px;
+	font-weight: 500;
+	color: #BBB;
+	margin-left: 10px;
+}
+
+.leftSide .chatStatus {
+	float: left;
+	clear: left;
+	margin-left: 30px;
+	margin-top: 5px;
+	color: #419fd9;
+	font-weight: 300;
+	cursor: default;
+}
+
+.convHistory {
+	float: left;
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 140px);
+	background: #333;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.userBg {
+	background-image: url(Resources/1.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.msg {
+	position: relative;
+	width: auto;
+	min-width: 100px;
+	max-width: 45%;
+	height: auto;
+	padding: 25px;
+	padding-bottom: 35px;
+	margin: 20px 15px;
+	margin-bottom: 0px;
+	background: #FFF;
+	border-radius: 7px;
+	clear: both;
+}
+
+.msg:nth-last-child(1) {
+	margin-bottom: 20px;
+}
+
+.msg .timestamp {
+	display: block;
+	position: absolute;
+	right: 10px;
+	bottom: 6px;
+	color: #AAA;
+	user-select: none;
+}
+
+.received>img, .sended>img {
+	float: right;
+	width: 50px;
+	border-radius: 100%;
+}
+
+.received {
+	float: left;
+	color: white;
+	background: #4e6a86;
+}
+
+.sended {
+	float: right;
+	color: white;
+	background: #6587aa;
+}
+
+.sended>.timestamp,
+.sended>.readStatus {
+	bottom: 10px;
+	right: 40px;
+	color: darkgreen;
+	user-select: none;
+}
+
+.sended>.readStatus {
+	position: absolute;
+	bottom: 10px;
+	right: 12px;
+}
+
+.replyBar {
+	width: 100%;
+	height: 70px;
+	float: left;
+	background: #17212b;
+}
+
+.replyBar .replyMessage {
+	width: calc(100% - 220px);
+	float: left;
+	height: 70px;
+	padding: 0px 8px;
+	font-size: 16px;
+	color: white;
+	font-family: 'Karla', sans-serif;
+	background-color: #17212b;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+	background: #a5a5a5; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+	background: #36526d; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+	background: #799ec0; 
+  }
+
+@media screen and (max-width: 1180px) {
+	.config {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.config {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	.leftPanel {
+		width: 40%;
+	}
+
+	.rightPanel {
+		width: calc(60% - 1px);
+	}
+}
+
+@media screen and (max-width: 640px) {
+	body {
+		font-size: 14px;
+	}
+
+	.leftPanel {
+		width: 45%;
+	}
+
+	.rightPanel {
+		width: calc(55% - 1px);
+	}
+
+	.msg {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.leftPanel {
+		width: 45%;
+	}
+
+	.rightPanel {
+		width: calc(55% - 1px);
+	}
+
+	.msg {
+		width: auto;
+		max-width: 60%;
+	}
+}
