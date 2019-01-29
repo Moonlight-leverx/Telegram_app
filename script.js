@@ -152,5 +152,9 @@ $(".overlay").click(function () {
 });
 
 function meAlert() {
+<<<<<<< HEAD
 	alert("Hello, Dog");
+=======
+	alert("Hello, user");
+>>>>>>> features
 }
